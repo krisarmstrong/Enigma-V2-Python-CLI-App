@@ -1,5 +1,4 @@
 from builtins import print
-import re
 __author__ = 'krisarmstrong'
 
 # Global Variables
@@ -56,12 +55,8 @@ def calc_option_code(m_key_code):
 
         option_key.append(int(m_key_code))
 
-    print("Option Key: ", option_key)
-
     opt_code = (''.join(map(str, option_key)))
-    test = re.findall("....", opt_code)
-
-    print("Option Code: ", opt_code, test)
+    print("Option Code: ", opt_code)
 
 
 def main():
