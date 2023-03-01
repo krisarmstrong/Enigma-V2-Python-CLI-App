@@ -1,4 +1,5 @@
 from builtins import print
+
 __author__ = 'krisarmstrong'
 
 # Global Variables
@@ -32,7 +33,6 @@ def calc_checksum(in_string):
 
 
 def calc_option_code(m_key_code):
-
     # Rotors used to calculate Option Key
     e_rotor_10 = bytes([5, 4, 1, 8, 7, 3, 0, 2, 9, 6])
     e_rotor_26 = bytes([16, 8, 25, 5, 23, 21, 18, 17, 2, 1, 7, 24, 15, 11, 9, 6, 3, 0, 19, 12, 22, 14, 10, 4, 20, 13])
@@ -40,7 +40,7 @@ def calc_option_code(m_key_code):
     # Setting max check sum size to 26000
     max_check_sum = 26000
 
-# Encipher Key
+    # Encipher Key
     option_key = []
     checksum = 0
     for idx, n in enumerate(m_key_code[:]):
@@ -68,6 +68,7 @@ def main():
     in_string = temp_check_sum + product_code + serial_number + option_code
 
     calc_checksum(in_string)
+
 
 if __name__ == "__main__":
     main()
